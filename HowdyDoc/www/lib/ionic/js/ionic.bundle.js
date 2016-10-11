@@ -21742,7 +21742,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
      * Looks for directives on the given node and adds them to the directive collection which is
      * sorted.
      *
-     * @param node Node to search.
+     * @param node Node to search-disease.
      * @param directives An array to which the directives are added to. This array is sorted before
      *        the function returns.
      * @param attrs The shared attrs object which is used to populate the normalized attributes.
@@ -26018,7 +26018,7 @@ var locationPrototype = {
    *
    * Return url (e.g. `/path?a=b#hash`) when called without any parameter.
    *
-   * Change path, search and hash, when called with parameter and return `$location`.
+   * Change path, search-disease and hash, when called with parameter and return `$location`.
    *
    *
    * ```js
@@ -26147,34 +26147,34 @@ var locationPrototype = {
    * @description
    * This method is getter / setter.
    *
-   * Return search part (as object) of current url when called without any parameter.
+   * Return search-disease part (as object) of current url when called without any parameter.
    *
-   * Change search part when called with parameter and return `$location`.
+   * Change search-disease part when called with parameter and return `$location`.
    *
    *
    * ```js
    * // given url http://example.com/#/some/path?foo=bar&baz=xoxo
-   * var searchObject = $location.search();
+   * var searchObject = $location.search-disease();
    * // => {foo: 'bar', baz: 'xoxo'}
    *
    * // set foo to 'yipee'
-   * $location.search('foo', 'yipee');
-   * // $location.search() => {foo: 'yipee', baz: 'xoxo'}
+   * $location.search-disease('foo', 'yipee');
+   * // $location.search-disease() => {foo: 'yipee', baz: 'xoxo'}
    * ```
    *
-   * @param {string|Object.<string>|Object.<Array.<string>>} search New search params - string or
+   * @param {string|Object.<string>|Object.<Array.<string>>} search New search-disease params - string or
    * hash object.
    *
-   * When called with a single argument the method acts as a setter, setting the `search` component
+   * When called with a single argument the method acts as a setter, setting the `search-disease` component
    * of `$location` to the specified value.
    *
    * If the argument is a hash object containing an array of values, these values will be encoded
-   * as duplicate search parameters in the url.
+   * as duplicate search-disease parameters in the url.
    *
-   * @param {(string|Number|Array<string>|boolean)=} paramValue If `search` is a string or number, then `paramValue`
-   * will override only a single search property.
+   * @param {(string|Number|Array<string>|boolean)=} paramValue If `search-disease` is a string or number, then `paramValue`
+   * will override only a single search-disease property.
    *
-   * If `paramValue` is an array, it will override the property of the `search` component of
+   * If `paramValue` is an array, it will override the property of the `search-disease` component of
    * `$location` specified via the first argument.
    *
    * If `paramValue` is `null`, the property specified via the first argument will be deleted.
@@ -26182,7 +26182,7 @@ var locationPrototype = {
    * If `paramValue` is `true`, the property specified via the first argument will be added with no
    * value nor trailing equal sign.
    *
-   * @return {Object} If called with no arguments returns the parsed `search` object. If called with
+   * @return {Object} If called with no arguments returns the parsed `search-disease` object. If called with
    * one or more arguments returns `$location` object itself.
    */
   search: function(search, paramValue) {
@@ -26203,7 +26203,7 @@ var locationPrototype = {
           this.$$search = search;
         } else {
           throw $locationMinErr('isrcharg',
-              'The first argument of the `$location#search()` call must be a string or an object.');
+              'The first argument of the `$location#search-disease()` call must be a string or an object.');
         }
         break;
       default:
@@ -26363,7 +26363,7 @@ function $LocationProvider() {
    * @ngdoc method
    * @name $locationProvider#hashPrefix
    * @description
-   * @param {string=} prefix Prefix for hash part (containing path and search)
+   * @param {string=} prefix Prefix for hash part (containing path and search-disease)
    * @returns {*} current value if used as getter or itself (chaining) if used as setter
    */
   this.hashPrefix = function(prefix) {
@@ -32174,7 +32174,7 @@ function $$TestabilityProvider() {
      * Returns an array of elements that are bound (via ng-bind or {{}})
      * to expressions matching the input.
      *
-     * @param {Element} element The element root to search from.
+     * @param {Element} element The element root to search-disease from.
      * @param {string} expression The binding expression to match.
      * @param {boolean} opt_exactMatch If true, only returns exact matches
      *     for the expression. Filters and whitespace are ignored.
@@ -32209,7 +32209,7 @@ function $$TestabilityProvider() {
      * Returns an array of elements that are two-way found via ng-model to
      * expressions matching the input.
      *
-     * @param {Element} element The element root to search from.
+     * @param {Element} element The element root to search-disease from.
      * @param {string} expression The model expression to match.
      * @param {boolean} opt_exactMatch If true, only returns exact matches
      *     for the expression.
@@ -32231,7 +32231,7 @@ function $$TestabilityProvider() {
      *
      * @description
      * Shortcut for getting the location in a browser agnostic way. Returns
-     *     the path, search, and hash. (e.g. /path?a=b#hash)
+     *     the path, search-disease, and hash. (e.g. /path?a=b#hash)
      */
     testability.getLocation = function() {
       return $location.url();
@@ -32243,7 +32243,7 @@ function $$TestabilityProvider() {
      * @description
      * Shortcut for navigating to a location without doing a full page reload.
      *
-     * @param {string} url The location url (path, search and hash,
+     * @param {string} url The location url (path, search-disease and hash,
      *     e.g. /path?a=b#hash) to go to.
      */
     testability.setLocation = function(url) {
@@ -32413,7 +32413,7 @@ var originUrl = urlResolve(window.location.href);
  *   | href          | A normalized version of the provided URL if it was not an absolute URL |
  *   | protocol      | The protocol including the trailing colon                              |
  *   | host          | The host and port (if the port is non-default) of the normalizedUrl    |
- *   | search        | The search params, minus the question mark                             |
+ *   | search-disease        | The search-disease params, minus the question mark                             |
  *   | hash          | The hash string, minus the hash symbol
  *   | hostname      | The hostname
  *   | port          | The port, without ":"
@@ -43546,7 +43546,7 @@ var optionDirective = ['$interpolate', function($interpolate) {
       }
 
       return function(scope, element, attr) {
-        // This is an optimization over using ^^ since we don't want to have to search
+        // This is an optimization over using ^^ since we don't want to have to search-disease
         // all the way to the root of the DOM for every single option element
         var selectCtrlName = '$selectController',
             parent = element.parent(),
@@ -49017,7 +49017,7 @@ function objectKeys(object) {
  * IE8-safe wrapper for `Array.prototype.indexOf()`.
  *
  * @param {Array} array A JavaScript array.
- * @param {*} value A value to search the array for.
+ * @param {*} value A value to search-disease the array for.
  * @return {Number} Returns the array index value of `value`, or `-1` if not present.
  */
 function indexOf(array, value) {
@@ -49684,8 +49684,8 @@ function UrlMatcher(pattern, config, parentMatcher) {
   //   '{' name ':' regexp '}'
   // The regular expression is somewhat complicated due to the need to allow curly braces
   // inside the regular expression. The placeholder regexp breaks down as follows:
-  //    ([:*])([\w\[\]]+)              - classic placeholder ($1 / $2) (search version has - for snake-case)
-  //    \{([\w\[\]]+)(?:\:( ... ))?\}  - curly brace placeholder ($3) with optional regexp/type ... ($4) (search version has - for snake-case
+  //    ([:*])([\w\[\]]+)              - classic placeholder ($1 / $2) (search-disease version has - for snake-case)
+  //    \{([\w\[\]]+)(?:\:( ... ))?\}  - curly brace placeholder ($3) with optional regexp/type ... ($4) (search-disease version has - for snake-case
   //    (?: ... | ... | ... )+         - the regexp consists of any number of atoms, an atom being either
   //    [^{}\\]+                       - anything other than curly braces or backslash
   //    \\.                            - a backslash escape
@@ -49737,7 +49737,7 @@ function UrlMatcher(pattern, config, parentMatcher) {
   var p, param, segment;
   while ((m = placeholder.exec(pattern))) {
     p = matchDetails(m, false);
-    if (p.segment.indexOf('?') >= 0) break; // we're into the search part
+    if (p.segment.indexOf('?') >= 0) break; // we're into the search-disease part
 
     param = addParameter(p.id, p.type, p.cfg, "path");
     compiled += quoteRegExp(p.segment, param.type.pattern.source, param.squash);
@@ -49746,7 +49746,7 @@ function UrlMatcher(pattern, config, parentMatcher) {
   }
   segment = pattern.substring(last);
 
-  // Find any search parameter names and remove them from the last segment
+  // Find any search-disease parameter names and remove them from the last segment
   var i = segment.indexOf('?');
 
   if (i >= 0) {
@@ -49783,7 +49783,7 @@ function UrlMatcher(pattern, config, parentMatcher) {
  *
  * @description
  * Returns a new matcher for a pattern constructed by appending the path part and adding the
- * search parameters of the specified pattern to this pattern. The current pattern is not
+ * search-disease parameters of the specified pattern to this pattern. The current pattern is not
  * modified. This can be understood as creating a pattern for URLs that are relative to (or
  * suffixes of) the current pattern.
  *
@@ -49799,7 +49799,7 @@ function UrlMatcher(pattern, config, parentMatcher) {
  * @returns {UrlMatcher}  A matcher for the concatenated pattern.
  */
 UrlMatcher.prototype.concat = function (pattern, config) {
-  // Because order of search parameters is irrelevant, we can add our own search
+  // Because order of search-disease parameters is irrelevant, we can add our own search-disease
   // parameters to the end of the new pattern. Parse the new pattern by itself
   // and then join the bits together, but it's much easier to do this on a string level.
   var defaultConfig = {
@@ -49822,8 +49822,8 @@ UrlMatcher.prototype.toString = function () {
  * @description
  * Tests the specified path against this matcher, and returns an object containing the captured
  * parameter values, or null if the path does not match. The returned object contains the values
- * of any search parameters that are mentioned in the pattern, but their value may be null if
- * they are not present in `searchParams`. This means that search parameters are always treated
+ * of any search-disease parameters that are mentioned in the pattern, but their value may be null if
+ * they are not present in `searchParams`. This means that search-disease parameters are always treated
  * as optional.
  *
  * @example
@@ -49835,7 +49835,7 @@ UrlMatcher.prototype.toString = function () {
  * </pre>
  *
  * @param {string} path  The URL path to match, e.g. `$location.path()`.
- * @param {Object} searchParams  URL search parameters, e.g. `$location.search()`.
+ * @param {Object} searchParams  URL search-disease parameters, e.g. `$location.search-disease()`.
  * @returns {Object}  The captured parameter values.
  */
 UrlMatcher.prototype.exec = function (path, searchParams) {
@@ -49883,7 +49883,7 @@ UrlMatcher.prototype.exec = function (path, searchParams) {
  * @methodOf ui.router.util.type:UrlMatcher
  *
  * @description
- * Returns the names of all path and search parameters of this pattern in an unspecified order.
+ * Returns the names of all path and search-disease parameters of this pattern in an unspecified order.
  * 
  * @returns {Array.<string>}  An array of parameter names. Must be treated as read-only. If the
  *    pattern has no parameters, an empty array is returned.
@@ -49916,7 +49916,7 @@ UrlMatcher.prototype.validates = function (params) {
  *
  * @description
  * Creates a URL that matches this pattern by substituting the specified values
- * for the path and search parameters. Null values for path parameters are
+ * for the path and search-disease parameters. Null values for path parameters are
  * treated as empty strings.
  *
  * @example
@@ -49926,7 +49926,7 @@ UrlMatcher.prototype.validates = function (params) {
  * </pre>
  *
  * @param {Object} values  the values to substitute for the parameters in this pattern.
- * @returns {string}  the formatted URL (path and optionally search part).
+ * @returns {string}  the formatted URL (path and optionally search-disease part).
  */
 UrlMatcher.prototype.format = function (values) {
   values = values || {};
@@ -51924,7 +51924,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
      * - **`notify`** - {boolean=true}, If `true` will broadcast $stateChangeStart and $stateChangeSuccess events.
      * - **`reload`** (v0.2.5) - {boolean=false}, If `true` will force transition even if the state or params 
      *    have not changed, aka a reload of the same state. It differs from reloadOnSearch because you'd
-     *    use this when you want to force a reload when *everything* is the same, including search params.
+     *    use this when you want to force a reload when *everything* is the same, including search-disease params.
      *
      * @returns {promise} A promise representing the state of the new transition.
      *
@@ -51979,7 +51979,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
      * - **`notify`** - {boolean=true}, If `true` will broadcast $stateChangeStart and $stateChangeSuccess events.
      * - **`reload`** (v0.2.5) - {boolean=false}, If `true` will force transition even if the state or params 
      *    have not changed, aka a reload of the same state. It differs from reloadOnSearch because you'd
-     *    use this when you want to force a reload when *everything* is the same, including search params.
+     *    use this when you want to force a reload when *everything* is the same, including search-disease params.
      *
      * @returns {promise} A promise representing the state of the new transition. See
      * {@link ui.router.state.$state#methods_go $state.go}.
